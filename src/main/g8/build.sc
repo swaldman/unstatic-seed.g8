@@ -12,7 +12,7 @@ val UnstaticVersion = "0.0.4"
 
 object Dependency {
   val Unstatic = ivy"com.mchange::unstatic:${UnstaticVersion}"
-  val UnstaticUnstaticZTapir = ivy"com.mchange::unstatic-ztapir:${UnstaticVersion}"
+  val UnstaticZTapir = ivy"com.mchange::unstatic-ztapir:${UnstaticVersion}"
 }
 
 object $module;format="camel"$ extends UntemplateModule {
@@ -39,7 +39,7 @@ object $module;format="camel"$ extends UntemplateModule {
     super.ivyDeps() ++
       Agg (
         Dependency.Unstatic,
-        Dependency.UnstaticUnstaticZTapir,
+        Dependency.UnstaticZTapir,
       ) // Agg
   }
 }
