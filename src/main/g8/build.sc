@@ -11,8 +11,8 @@ import untemplate.mill._
 val UnstaticVersion = "0.0.4"
 
 object Dependency {
-  val Unstatic = ivy"com.mchange::unstatic:${UnstaticVersion}"
-  val UnstaticZTapir = ivy"com.mchange::unstatic-ztapir:${UnstaticVersion}"
+  val Unstatic = ivy"com.mchange::unstatic:\${UnstaticVersion}"
+  val UnstaticZTapir = ivy"com.mchange::unstatic-ztapir:\${UnstaticVersion}"
 }
 
 object $module;format="camel"$ extends UntemplateModule {
