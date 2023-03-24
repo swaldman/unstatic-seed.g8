@@ -25,7 +25,7 @@ object $module;format="Camel"$Site extends ZTSite.SingleRootComposite( JPath.of(
   object HelloWorldPage extends ZTEndpointBinding.Source:
     val location = $module;format="Camel"$Site.location("/index.html")
     val task = zio.ZIO.attempt {
-      layout_main_html( MainLayoutInput( location, Some("Hello"),  "<h1>Hello World!</h1>" ) )
+      layout_main_html( MainLayoutInput( location, Some("Hello"),  "<h1>Hello World!</h1>" ) ).text
     }
     val endpointBindings = ZTEndpointBinding.publicReadOnlyHtml( location, task, None, immutable.Set("hello-world") ) :: Nil
   end HelloWorldPage
@@ -33,5 +33,5 @@ object $module;format="Camel"$Site extends ZTSite.SingleRootComposite( JPath.of(
   // avoid conflicts, but early items in the lists take precedence over later items
   override val endpointBindingSources : immutable.Seq[ZTEndpointBinding.Source] = immutable.Seq( HelloWorldPage )
 
-object $module;format="Camel"$SiteGenerator extends ZTMain($module;format="Camel"$, "$module;format="snake"$")
+object $module;format="Camel"$SiteGenerator extends ZTMain($module;format="Camel"$Site, "$module;format="snake"$-site")
 
