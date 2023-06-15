@@ -8,7 +8,7 @@ import \$file.buildCompilationSettings
 import \$ivy.`com.mchange::untemplate-mill:$untemplate_version$`
 import untemplate.mill._
 
-val UnstaticVersion = "0.0.4"
+val UnstaticVersion = "0.0.6"
 
 object Dependency {
   val Unstatic = ivy"com.mchange::unstatic:\${UnstaticVersion}"
