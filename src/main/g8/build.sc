@@ -2,7 +2,7 @@
 import mill._
 import mill.scalalib._
 
-// huge thanks to @lolgab onn the Scala discord!
+// huge thanks to @lolgab on the Scala discord!
 import \$file.buildCompilationSettings
 
 import \$ivy.`com.mchange::untemplate-mill:$untemplate_version$`
