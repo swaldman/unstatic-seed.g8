@@ -1,9 +1,7 @@
+import $meta._
 
 import mill._
 import mill.scalalib._
-
-// huge thanks to @lolgab on the Scala discord!
-import \$file.buildCompilationSettings
 
 import \$ivy.`com.mchange::untemplate-mill:$untemplate_version$`
 import untemplate.mill._
@@ -16,10 +14,7 @@ object Dependency {
 }
 
 object $module;format="camel"$ extends UntemplateModule {
-  override def scalaVersion = "3.2.1"
-
-  // supports Scala 3.2.1
-  override def ammoniteVersion = "2.5.6"
+  override def scalaVersion = "3.2.2
 
   // we'll build an index!
   override def untemplateIndexNameFullyQualified : Option[String] = Some("$package;format="package"$.IndexedUntemplates")
