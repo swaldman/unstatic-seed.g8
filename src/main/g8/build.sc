@@ -1,4 +1,4 @@
-import $meta._
+import \$meta._
 
 import mill._
 import mill.scalalib._
